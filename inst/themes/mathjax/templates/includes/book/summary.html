@@ -5,18 +5,18 @@
     <ul class="summary">
         {% if githubId %}
         <li>
-            <a href="{{ githubHost }}{{ githubAuthor }}" target="blank">About the author</a>
+            <a href="{{ githubHost }}{{ githubAuthor }}" target="blank">A szerzőről</a>
         </li>
         <li>
-            <a href="{{ githubHost }}{{ githubId }}/issues" target="blank">Questions and Issues</a>
+            <a href="{{ githubHost }}{{ githubId }}/issues" target="blank">Kérdések és észrevételek</a>
         </li>
         <li>
-            <a href="{{ githubHost }}{{ githubId }}/edit/master/{{ _input }}" target="blank">Edit and Contribute</a>
+            <a href="{{ githubHost }}{{ githubId }}/edit/master/{{ _input }}" target="blank">Szerkesztés</a>
         </li>
         <li class="divider"></li>
         {% endif %}
         <li data-level="0" data-path="index.html">
-            <a href="{{ basePath }}/"><i class="fa fa-check"></i> Introduction</a>
+            <a href="{{ basePath }}/"><i class="fa fa-check"></i>Áttekintő</a>
         </li>
         {% for item in summary.chapters %}
             <li {% if item._path == _input %}class="active"{% endif %} data-level="{{ item.level }}" {% if item.path %}data-path="{{ item.path|mdLink }}"{% endif %}>
